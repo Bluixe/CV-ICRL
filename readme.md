@@ -1,4 +1,4 @@
-# Towards Monotonic Improvement in In-Context Reinforcement Learning
+# Context Value Informed ICRL
 
 ## Instructions for Setting Up the Environment
 
