@@ -30,6 +30,7 @@ from loguru import logger
 from tqdm import tqdm
 
 import wandb
+os.environ.setdefault("WANDB_MODE", "disabled")
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
