@@ -1,0 +1,211 @@
+{
+  "base_public_commit": "fddde4d",
+  "note": "source_sha256 identifies recovered source before release adaptations; released_sha256 identifies the released file. Research commits belong to the source repository, not public Git history.",
+  "files": [
+    {
+      "file": "train_reinformer_minigrid.py",
+      "source_commit": "f356f05",
+      "source_sha256": "97de5d12325e253ebd8f305cbf521b5ea7f13973378b860bfdc3742f37f2c435",
+      "released_sha256": "d025d70ebbd9de04c3366e28c9271c69482261a67382f5ec968d5d45ec7b41fc"
+    },
+    {
+      "file": "eval_reinformer_minigrid.py",
+      "source_commit": "f356f05",
+      "source_sha256": "d994dca4065db5bfaf7a25b3f0fd8dd0094e657aee05c8bb0e94457c74708ac3",
+      "released_sha256": "a1b0ac5ab449203e956c9fb52a5401bb360520f2c5a39a3649c7920ec1849adb"
+    },
+    {
+      "file": "minigrid_reinformer_dataset.py",
+      "source_commit": "f356f05",
+      "source_sha256": "8cc01d57beb7b6db8fc31961838203d6c8867a3d2ff2aafea8a42f59c574ea75",
+      "released_sha256": "8cc01d57beb7b6db8fc31961838203d6c8867a3d2ff2aafea8a42f59c574ea75"
+    },
+    {
+      "file": "nets/reinformer_minigrid.py",
+      "source_commit": "f356f05",
+      "source_sha256": "3bbbe649baa0dd7daf8620a176bbdb7b242ab6722abcf49c662b849ff400c765",
+      "released_sha256": "3bbbe649baa0dd7daf8620a176bbdb7b242ab6722abcf49c662b849ff400c765"
+    },
+    {
+      "file": "tests/test_minigrid_reinformer.py",
+      "source_commit": "f356f05",
+      "source_sha256": "408bc743ec6be4fb3a3f19645b056eebfe7ef48a1cb52fa4b6cd00560d37f13a",
+      "released_sha256": "408bc743ec6be4fb3a3f19645b056eebfe7ef48a1cb52fa4b6cd00560d37f13a"
+    },
+    {
+      "file": "train_ic_cql_minigrid.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "e76b4dac389e7b13510cec05996f3774058c40ba881b93af52b1b9274ba9e446",
+      "released_sha256": "e0b726404feb5eeffe69345fc9e0c10f95d502d80a6cb4b058425e0f2f5134ea"
+    },
+    {
+      "file": "eval_ic_cql_minigrid.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "e30db413a32c5054be286ae02647364925faa353d481c91b9208c716bdf51733",
+      "released_sha256": "1ab85c23bd7bc45541a9119abd011737728c07f40c22e77f523289b3000bf006"
+    },
+    {
+      "file": "minigrid_ic_cql_dataset.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "a3a6c52826224a24652c736de7249d56c71f7d4c01118d18bab96f170373df5d",
+      "released_sha256": "a3a6c52826224a24652c736de7249d56c71f7d4c01118d18bab96f170373df5d"
+    },
+    {
+      "file": "nets/ic_cql_minigrid.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "5464d907969ea3ec9e10160f1ac24db1318d2631e7b22b7c1141be526df739c0",
+      "released_sha256": "5464d907969ea3ec9e10160f1ac24db1318d2631e7b22b7c1141be526df739c0"
+    },
+    {
+      "file": "tests/test_ic_cql_minigrid.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "ea17c32a6435f03cbed641b1ebc4e1b04524a18982b41a6eede9029101390a7e",
+      "released_sha256": "ea17c32a6435f03cbed641b1ebc4e1b04524a18982b41a6eede9029101390a7e"
+    },
+    {
+      "file": "tests/test_minigrid_ic_cql_stream_predecessor.py",
+      "source_commit": "1b6c35b",
+      "source_sha256": "87145bff4286abd924b22cdf61e7ffa912854003d15da2fe8ff20f35a7e8286e",
+      "released_sha256": "87145bff4286abd924b22cdf61e7ffa912854003d15da2fe8ff20f35a7e8286e"
+    },
+    {
+      "file": "e1_minigrid_diagnostics.py",
+      "source_commit": "842a924",
+      "source_sha256": "45dfe544761d767cba9c77491f2c6fc82bdf2406d6c91f8d623123fae8fea896",
+      "released_sha256": "45dfe544761d767cba9c77491f2c6fc82bdf2406d6c91f8d623123fae8fea896"
+    },
+    {
+      "file": "tests/test_e1_minigrid_diagnostics.py",
+      "source_commit": "842a924",
+      "source_sha256": "7940e6ceff1ec73aa41d3c0671ead07643fa13fe0c6920d4e655f2452f2e345a",
+      "released_sha256": "7940e6ceff1ec73aa41d3c0671ead07643fa13fe0c6920d4e655f2452f2e345a"
+    },
+    {
+      "file": "train_icl_procgen.py",
+      "source_commit": "bc2eaa1",
+      "source_sha256": "ace3b5ce241a45efb22c03bd36b483e1ab140c383b9004d0499700437a4470fc",
+      "released_sha256": "d63537fba18706fb85c2b3587117a9c0fede431ab66196f74da05eb00f2d0be9"
+    },
+    {
+      "file": "eval_icl_procgen.py",
+      "source_commit": "bc2eaa1",
+      "source_sha256": "0670ec6234e3f7e92b372682d7eee66a492daa1a074211202ccd012fc2435dce",
+      "released_sha256": "9267b82b7f5a0288010a055015a2d16361c7a45a35ea955f7a4d8e32c59c7b9a"
+    },
+    {
+      "file": "train_procgen_ppo_official.py",
+      "source_commit": "bc2eaa1",
+      "source_sha256": "f8356d0f165a1bcf3b4661840b3d9a69fca9d70e87f07928b812b3e86ee4aef3",
+      "released_sha256": "7c899250c370d2941a4d2728f7d1c9c194e920432b112869fa8d68e5b62a6158"
+    },
+    {
+      "file": "nets/impala_cnn.py",
+      "source_commit": "bc2eaa1",
+      "source_sha256": "ca5bc326af0621bdb288904d464aa8e9ab04117b2717d567cc29c27faaf315bb",
+      "released_sha256": "713b015f94c6b86c6be03c1682612a34f9f51bd3e12b0e13e08ce0296edcb11d"
+    },
+    {
+      "file": "nets/net.py",
+      "source_commit": "28e317d",
+      "component": "MinigridMultiheadTransformer only",
+      "source_sha256": "fc684dce2675f193c8ede56c1ebf29de873aa26eac365643346e1b4e47834e56",
+      "released_sha256": "a3891867cc26d703ca955fe683e6c42fa5f26fa36b95e03d16d29eac2e672721"
+    },
+    {
+      "file": "minigrid_ppo_targets.py",
+      "source_commit": "afa0ce0",
+      "component": [
+        "ContractError",
+        "SB3ValueBackend",
+        "_finite_float",
+        "_require",
+        "derive_row_block_mapping",
+        "derive_selected_eval_indices"
+      ],
+      "source_sha256": "dc8e2b084b446f4bcd48c375a1b99b322875ab8d9c7e0f0c2a5bdfee5900010f",
+      "released_sha256": "8b8e73b48790f0acbe6a4e7e23e9e032e70a220a79ba141bb6f2746d2c7742fe"
+    },
+    {
+      "file": "collect_procgen_official.py",
+      "source_commit": "bc2eaa1",
+      "source_sha256": "b3eafbd6b7a40140dabdad5778af7fbfd12beb21bd8d94097912e2c9a7947ca8",
+      "released_sha256": "af17ddff30d6fdf2720bbaaee49afac9917d21aadb0611d01bc382c3cee165b8"
+    },
+    {
+      "file": "train_icl_metaworld.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": false,
+      "source_sha256": "5b98d4a49ae1a29a5ad58f26b8282119d4a9b76452a399009e48f3057265379d",
+      "released_sha256": "3028324c434232b323b236d77c5c619058c7999838b92ee73e87b7a2529041a3"
+    },
+    {
+      "file": "eval_icl_metaworld.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": false,
+      "source_sha256": "38acda425b073960a5de4db9a757930c5d47239d71f71cb7409262cecda9fb6f",
+      "released_sha256": "738ae05a12009b4de9488ede1c6e79d5bb983965fd848a8172608c6e650cb79c"
+    },
+    {
+      "file": "collect_metaworld_data.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": false,
+      "source_sha256": "d2c770b6e4e3501ed1900650ae541e4139376f871c474844d94d066270558bc6",
+      "released_sha256": "3dcd70e409be88b0f245e4e3479ccffa4f8bfc09d150cf8489a3612f2b5a26c4"
+    },
+    {
+      "file": "train_ppo_ml1_all_goals.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": true,
+      "source_sha256": "db1759a3b406ed1fc37cea5cb8294b51b5afd365dce12e92b2b5d32c9bed365d",
+      "released_sha256": "62335c8033168c3868ad2ca3e492e916f967ebad89c567092a3e1af603c93f2e"
+    },
+    {
+      "file": "metaworld_dataset.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": false,
+      "source_sha256": "35515288006d5c4aaa126a04b2286c54d67ba70da5d71af45cb2a87973492e31",
+      "released_sha256": "2bdff3c218e480bcf3ac1d6e751a1533ae1861859af4a9d7446d1c1e0770a536"
+    },
+    {
+      "file": "nets/metaworld_net.py",
+      "source_commit": "63cb386dfedc8594b37a1369324c0f0cc20b3838",
+      "working_tree_modified": false,
+      "source_sha256": "3f5f10e6a73ae9ca25bc7f4182461ef4623398430216e2d6a513f5e282ee8208",
+      "released_sha256": "3f5f10e6a73ae9ca25bc7f4182461ef4623398430216e2d6a513f5e282ee8208"
+    }
+  ],
+  "release_authored_files": [
+    {
+      "file": "train_cv_minigrid.py",
+      "released_sha256": "3bec9f1b905c4dba40afe4c9daab662d8a79d5299e3ff76a55a0b954976c7147"
+    },
+    {
+      "file": "eval_cv_minigrid.py",
+      "released_sha256": "89223e7790253b48ee6ab038200fbf6f0ff814a938f307f7f964b99580b254ea"
+    },
+    {
+      "file": "build_ppo_state_targets.py",
+      "released_sha256": "86f8c2e349397a6703aaaf852410d6155a719f3f965a9df9f4c5c9c1281dbb50"
+    },
+    {
+      "file": "scripts/run_minigrid_baseline.sh",
+      "released_sha256": "48b8c6c5f9a14782039e16992240a7645882bdf163e92120408399f043fdcb9b"
+    },
+    {
+      "file": "scripts/run_minigrid_feedback.sh",
+      "released_sha256": "58ddc810f9e4a85a9ec97590f47edf95792b7f09b897595a3731bc9a7757210e"
+    },
+    {
+      "file": "tests/test_release_contracts.py",
+      "released_sha256": "ba1b714981a1f37a58944b7e21829c783119195629aaa5616ede668dabfbe6e2"
+    },
+    {
+      "file": "tests/smoke_release.py",
+      "released_sha256": "5b9dc720fed8741d7479a4af324fdf91c9a0c8de557616fa4be6b84918a48074"
+    },
+    {
+      "file": "tests/smoke_metaworld.py",
+      "released_sha256": "e8b3b19c37b8432149669ac9dd6a633d60bacb9404972d3694c6328a9427e198"
+    }
+  ]
+}

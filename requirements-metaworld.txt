@@ -1,0 +1,11 @@
+# Separate Python 3.10 environment; does not use the root numpy pins or vendored SB3.
+metaworld==3.0.0
+mujoco==3.6.0
+numpy==2.2.6
+gymnasium==1.2.3
+transformers==4.40.0
+stable-baselines3==2.8.0
+loguru
+wandb
+tqdm
+tensorboard==2.20.0

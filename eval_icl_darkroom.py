@@ -1,8 +1,10 @@
+import os
 from envs import darkroom_env, bandit_env
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 from stable_baselines3.common.callbacks import CallbackList, EvalCallback
 
 import wandb
+os.environ.setdefault("WANDB_MODE", "disabled")
 from wandb.integration.sb3 import WandbCallback
 import minigrid
 from tqdm import tqdm

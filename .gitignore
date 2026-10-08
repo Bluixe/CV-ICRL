@@ -20,3 +20,12 @@ models/
 
 *.zip
 *.log
+# Private configuration and generated experiment artifacts
+.env
+.env.*
+*.npz
+*.npy
+*.pth
+outputs/
+.pytest_cache/
+.DS_Store

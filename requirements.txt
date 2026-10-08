@@ -1,10 +1,16 @@
-transformers==4.5.1
+# Python 3.9; install torch first using the command in readme.md.
+transformers==4.50.3
+numpy==1.23.5
 scipy==1.9.3
 scikit-image==0.21.0
 ipython==8.6.0
-numpy==1.23.5
 tqdm==4.64.1
 gym==0.23.1
+gymnasium==1.1.1
 opencv-python==4.7.0.72
 matplotlib==3.6.2
-packaging==21.3
+packaging>=21.3
+loguru==0.7.3
+wandb==0.19.9
+pygame==2.6.1
+tensorboard==2.19.0

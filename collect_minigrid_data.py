@@ -29,9 +29,6 @@ from env_list import ENVS, HARD_ENVS
 from multiprocessing import Process, Queue, set_start_method
 import multiprocessing
 
-from nets.cql.base import ReplayBuffer
-from nets.cql.discrete_cql import DiscreteCQLPolicy
-from nets.cql.nets import QValueNet
 import torch
 
 # 设置多进程启动方法为 'spawn'，解决 CUDA 在 fork 子进程中的问题
@@ -102,6 +99,8 @@ def sample_traj_multi_seed(model_idxs, ckpt_version, env, num_envs, ckpt_path, u
     max_offset = model_per_traj // 2
     total_num = (len(model_idxs) - model_per_traj) // 2 + 1
     if use_q_net:
+        from nets.cql.discrete_cql import DiscreteCQLPolicy
+        from nets.cql.nets import QValueNet
         config = {
             "dropout": 0,
             'n_embd': 256

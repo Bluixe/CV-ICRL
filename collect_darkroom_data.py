@@ -29,9 +29,6 @@ from env_list import ENVS, HARD_ENVS
 from multiprocessing import Process, Queue, set_start_method
 import multiprocessing
 
-from nets.cql.base import ReplayBuffer
-from nets.cql.discrete_cql import DiscreteCQLPolicy
-from nets.cql.nets import QValueNet
 import torch
 
 # 设置多进程启动方法为 'spawn'，解决 CUDA 在 fork 子进程中的问题

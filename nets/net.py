@@ -188,8 +188,8 @@ class DarkroomTransformer(nn.Module):
             context_rewards = context_rewards[:, :, None]
 
         padding_action = torch.zeros(
-            context_actions.shape[0], 1, self.action_dim).to(device)
-        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1).to(device)
+            context_actions.shape[0], 1, self.action_dim, device=context_actions.device)
+        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1, device=context_rewards.device)
         if self.mode == "ad":
             context_actions = torch.cat(
                 [padding_action, context_actions[:, :-1, :]], dim=1)
@@ -273,8 +273,8 @@ class DarkroomLambdaTransformer(nn.Module):
             context_lambda = context_lambda[:, :, None]
 
         padding_action = torch.zeros(
-            context_actions.shape[0], 1, self.action_dim).to(device)
-        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1).to(device)
+            context_actions.shape[0], 1, self.action_dim, device=context_actions.device)
+        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1, device=context_rewards.device)
         if self.mode == "ad":
             context_actions = torch.cat(
                 [padding_action, context_actions[:, :-1, :]], dim=1)
@@ -384,8 +384,8 @@ class MinigridTransformer(nn.Module):
             context_rewards = context_rewards[:, :, None]
 
         padding_action = torch.zeros(
-            context_actions.shape[0], 1, self.action_dim).to(device)
-        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1).to(device)
+            context_actions.shape[0], 1, self.action_dim, device=context_actions.device)
+        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1, device=context_rewards.device)
         if self.mode == "ad":
             context_actions = torch.cat(
                 [padding_action, context_actions[:, :-1, :]], dim=1)
@@ -475,7 +475,7 @@ class MinigridMultiheadTransformer(nn.Module):
         self.pred_values = nn.Linear(self.n_embd, 1)
         self.mode = mode
 
-    def forward(self, x):
+    def forward(self, x, auto_relabel=False, pred_actions=False):
         if self.mode == "dpt":
             context_states = x['context_states']
             optimal_actions = x['optimal_actions']
@@ -487,7 +487,6 @@ class MinigridMultiheadTransformer(nn.Module):
             # 对于ad模式，next_state就是state序列向后移动一位
             context_states = x['context_states']
         
-        # print(context_states)
         context_actions = x['context_actions']
         context_rewards = x['context_rewards']
 
@@ -505,23 +504,26 @@ class MinigridMultiheadTransformer(nn.Module):
             context_rewards = context_rewards[:, :, None]
 
         padding_action = torch.zeros(
-            context_actions.shape[0], 1, self.action_dim).to(device)
-        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1).to(device)
+            context_actions.shape[0], 1, self.action_dim, device=context_actions.device)
+        padding_reward = torch.zeros(context_rewards.shape[0], 1, 1, device=context_rewards.device)
         if self.mode == "ad":
             context_actions = torch.cat(
                 [padding_action, context_actions[:, :-1, :]], dim=1)
-            context_rewards = torch.cat(
-                [padding_reward, context_rewards[:, :-1, :]], dim=1)
+            if auto_relabel:
+                if pred_actions:
+                    context_rewards = context_rewards
+                else:
+                    context_rewards = torch.cat(
+                        [padding_reward, context_rewards[:, :-1, :]], dim=1)
+            else:
+                context_rewards = torch.cat(
+                    [padding_reward, context_rewards[:, :-1, :]], dim=1)
         
 
         batch_size = context_states.shape[0]
 
         # 处理next_state图像序列
-        if self.mode == "dpt":
-            # 对于dpt模式，将query_state和context_next_states拼接
-            image_seq = torch.cat([query_states, context_next_states], dim=1)
-        else:
-            image_seq = context_states
+        image_seq = context_states
         
         image_seq = image_seq.view(-1, *image_seq.size()[2:])
         image_enc_seq = self.image_encoder(image_seq)
@@ -544,4 +546,3 @@ class MinigridMultiheadTransformer(nn.Module):
         values = self.pred_values(transformer_outputs['last_hidden_state'])
 
         return preds, values
-    

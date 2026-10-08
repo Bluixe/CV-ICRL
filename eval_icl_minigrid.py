@@ -1,8 +1,10 @@
+import os
 from envs import darkroom_env, bandit_env
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 from stable_baselines3.common.callbacks import CallbackList, EvalCallback
 
 import wandb
+os.environ.setdefault("WANDB_MODE", "disabled")
 from wandb.integration.sb3 import WandbCallback
 import minigrid
 from tqdm import tqdm
@@ -25,7 +27,7 @@ from minigrid.wrappers import ImgObsWrapper
 from loguru import logger
 import pprint
 from env_list import ENVS, HARD_ENVS
-from nets.net import MinigridTransformer, MinigridDPTTransformer, MinigridMultiheadTransformer, MinigridTargetTransformer, MinigridSICQLTransformer
+from nets.net import MinigridTransformer, MinigridMultiheadTransformer
 
 # 设置设备
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
